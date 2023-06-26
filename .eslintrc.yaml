@@ -1,0 +1,26 @@
+root: true
+
+parserOptions:
+  ecmaVersion: latest
+
+extends:
+  - "airbnb-base"
+  - "plugin:prettier/recommended"
+
+plugins:
+  - "prettier"
+
+env:
+  browser: true
+  node: true
+
+rules:
+  no-param-reassign:
+    - off
+    - props: true
+      ignorePropertyModificationsFor:
+        - req
+        - reply
+  no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
+  "func-names": "off"
+  "consistent-return": "off"
